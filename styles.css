@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    background: linear-gradient(to bottom left, #0f0627 0%, #3c318f 100%);
+    color: rgb(240,240,240);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll; 
+    scrollbar-width: thin; 
+}
+
+.background-canvas {
+    position: fixed; 
+    height: inherit;
+    width: inherit;
+    z-index: -1;
+}
+
+.container {
+    width: 91%;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: rgb(240,240,240);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(240,240,240);
+}
+
+.tile {
+    width: 100%;
+    background-color: rgb(37,37,37);
+    margin: 7px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.tile:hover {
+    transition: cubic-bezier(.07, 1.41, .82, 1.41) 0.2s;
+    transform: scale(1.02);
+}
+
+.tile-share-button {
+    margin: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(52,52,52);
+}
+
+.tile-share-button svg {
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+
+.image-container {
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.image-container img {
+    height: 100%;
+}
+
+.image-container.active {
+    opacity: 1;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.icon {
+    margin: 4px 8px;
+    width: 44px;
+    height: 44px;
+}
+
+.footer {
+    padding: 50px 20px 20px 20px;
+    background-color: transparent;
+    text-align: center;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background: linear-gradient(to bottom, #0f0627 0%, #3c318f 200%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    transition: background-color 0.3s; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
